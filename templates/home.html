@@ -1,0 +1,56 @@
+<form action="/data" method = "POST">
+    <h1>Overwatch 2 Stats Comparison</h1>
+    <p>First Username <input type = "text" name = "username-1" /></p>
+    <p>Second Username <input type = "text" name = "username-2" /></p>
+    <label for="hero">Hero:</label>
+    <select name="hero" id="hero">
+        <option value="ana">Ana</option> 
+        <option value="ashe">Ashe</option>
+        <option value="baptiste">Baptiste</option> 
+        <option value="bastion">Bastion</option>
+        <option value="brigitte">Brigitte</option> 
+        <option value="cassidy">Cassidy</option>
+        <option value="dva">D.va</option> 
+        <option value="doomfist">Doomfist</option>
+        <option value="echo">Echo</option> 
+        <option value="genji">Genji</option>
+        <option value="hanzo">Hanzo</option> 
+        <option value="junker-queen">Junker Queen</option>
+        <option value="junkrat">Junkrat</option> 
+        <option value="kiriko">Kiriko</option>
+        <option value="lifeweaver">Lifeweaver</option> 
+        <option value="lucio">Lucio</option>
+        <option value="mei">Mei</option> 
+        <option value="mercy">Mercy</option>
+        <option value="moira">Moira</option> 
+        <option value="orisa">Orisa</option>
+        <option value="pharah">Pharah</option> 
+        <option value="ramattra">Ramattra</option>
+        <option value="reaper">Reaper</option> 
+        <option value="reinhardt">Reinhardt</option>
+        <option value="roadhog">Roadhog</option> 
+        <option value="sigma">Sigma</option>
+        <option value="sojourn">Sojourn</option> 
+        <option value="soldier-76">Soldier 76</option>
+        <option value="sombra">Sombra</option> 
+        <option value="symmetra">Symmetra</option>
+        <option value="torbjorn">Torbjorn</option> 
+        <option value="tracer">Tracer</option>
+        <option value="widowmaker">Widowmaker</option> 
+        <option value="winston">Winston</option>
+        <option value="wrecking-ball">Wrecking Ball</option> 
+        <option value="zarya">Zarya</option>
+        <option value="zenyatta">Zenyatta</option> 
+    </select>
+    <label for="qp-comp">Quickplay/Comp:</label> 
+    <select name="qp-comp" id="qp-comp"> 
+        <option value="quickplay">Quickplay</option> 
+        <option value="competitive">Competitive</option> 
+    </select>
+    <p><input type = "submit" value = "Show Stats" /></p>
+</form>
+<body>
+    {% for mesg in get_flashed_messages() %}
+    <h1>{{ mesg }}</h1>
+    {% endfor %}
+</body>
