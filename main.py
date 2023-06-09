@@ -1,12 +1,15 @@
 import requests
 import base64
+import os
 from io import BytesIO
 from flask import Flask,render_template, request, flash, redirect, url_for
 from matplotlib.figure import Figure
 from matplotlib import rcParams
+from dotenv import load_dotenv
 
+load_dotenv()
 app = Flask(__name__)
-app.secret_key = 'gus'
+app.secret_key = os.getenv('SECRET_KEY')
  
 @app.route('/home')
 def home():
